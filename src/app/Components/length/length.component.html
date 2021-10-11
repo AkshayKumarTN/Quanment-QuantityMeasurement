@@ -1,0 +1,54 @@
+<div>
+    <div>
+        <app-dashboard></app-dashboard>
+    </div>
+    <div>
+        <div class="main" >
+            <div>
+                <p style="font-size: 15px; font-weight: 500; letter-spacing: 1px;">CHOOSE TYPE</p>
+            </div>
+            <div>
+                <div fxLayout="row" fxLayoutGap="8%" >
+                    <div>
+                        <mat-card class="card1">
+                            <div fxLayout="column"  fxLayoutAlign="space-between center">
+                                <img src="../../../assets/Image/scale.svg" alt="length">
+                                <p style="padding-top: 20%; color: #0EC098;">Length</p>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div>
+                        <mat-card class="card" *ngIf="!isExpandable">
+                            <div fxLayout="column"  fxLayoutAlign="space-between center" (mouseover)="isExpandable=true" >
+                                <img src="../../../assets/Image/hot-1.svg" alt="length">
+                                <p style="padding-top: 10%; color: #aeafaf;">Temperature</p>
+                            </div>
+                        </mat-card>
+                        <mat-card class="card-red" *ngIf="isExpandable">
+                            <div fxLayout="column"  fxLayoutAlign="space-between center" (mouseleave)="isExpandable=false">
+                                <img src="../../../assets/Image/hot.svg" alt="length">
+                                <p style="padding-top: 10%; color: #FD5160;">Temperature</p>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div>
+                        <mat-card class="card" *ngIf="!isExpandable1">
+                            <div fxLayout="column"  fxLayoutAlign="space-between center" (mouseover)="isExpandable1=true">
+                                <img src="../../../assets/Image/beaker-1.svg" alt="length" >
+                                <p style="padding-top: 20%; color: #aeafaf;">Volume</p>
+                            </div>
+                        </mat-card>
+                        <mat-card class="card-blue" *ngIf="isExpandable1">
+                            <div fxLayout="column"  fxLayoutAlign="space-between center" (mouseleave)="isExpandable1=false">
+                                <img src="../../../assets/Image/beaker.svg" alt="length" >
+                                <p style="padding-top: 20%; color: #7224FF;" >Volume</p>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

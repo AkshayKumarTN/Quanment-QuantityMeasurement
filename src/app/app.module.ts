@@ -7,12 +7,14 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './Components/home/home.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LengthComponent } from './Components/length/length.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    LengthComponent
   ],
   imports: [
     BrowserModule,
